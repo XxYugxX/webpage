@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriTech - Smart Agriculture & Digital Farming</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-seedling"></i> Agri<span>Tech</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#crops" class="nav-link">Crops</a>
+                <a href="#methods" class="nav-link">Modern Methods</a>
+                <a href="#irrigation" class="nav-link">Irrigation</a>
+                <a href="#soil" class="nav-link">Soil Info</a>
+                <a href="#calculator" class="nav-link">Fertilizer Calc</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#tips" class="nav-link">Farmer Tips</a>
+            </nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="badge fade-in-up">Empowering Next-Gen Farmers</span>
+            <h1 class="fade-in-up delay-1">Smart Agriculture & <span>Digital Farming</span></h1>
+            <p class="fade-in-up delay-2">Transforming traditional agriculture with precision farming, IoT insights, smart irrigation, and data-driven crop analytics.</p>
+            <div class="hero-btns fade-in-up delay-3">
+                <a href="#crops" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Explore Crops</a>
+                <a href="#calculator" class="btn btn-secondary"><i class="fa-solid fa-calculator"></i> Calculate Fertilizer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Widget Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Real-Time Live Weather</h2>
+                <p>Monitor localized atmospheric metrics to plan optimal planting and harvesting schedules.</p>
+            </div>
+            <div class="weather-card scroll-reveal">
+                <div class="weather-header">
+                    <div>
+                        <h3 class="weather-location"><i class="fa-solid fa-location-dot"></i> Central Valley Research Farm</h3>
+                        <p class="weather-desc">Live Atmospheric Telemetry</p>
+                    </div>
+                    <div class="weather-temp">26°C</div>
+                </div>
+                <div class="weather-grid">
+                    <div class="weather-item">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div>
+                            <span>Humidity</span>
+                            <strong>68%</strong>
+                        </div>
+                    </div>
+                    <div class="weather-item">
+                        <i class="fa-solid fa-wind"></i>
+                        <div>
+                            <span>Wind Speed</span>
+                            <strong>14 km/h</strong>
+                        </div>
+                    </div>
+                    <div class="weather-item">
+                        <i class="fa-solid fa-cloud-rain"></i>
+                        <div>
+                            <span>Precipitation</span>
+                            <strong>12%</strong>
+                        </div>
+                    </div>
+                    <div class="weather-item">
+                        <i class="fa-solid fa-compress"></i>
+                        <div>
+                            <span>Soil Pressure</span>
+                            <strong>1013 hPa</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crop Search & Information Finder -->
+    <section id="crops" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Crop Information Finder</h2>
+                <p>Search and filter our database for optimal growth requirements, soil suitability, and seasonal timing.</p>
+            </div>
+
+            <div class="search-bar-wrapper">
+                <div class="search-input-box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="cropSearchInput" placeholder="Search crops by name, soil type, or season...">
+                </div>
+                <div class="filter-dropdowns">
+                    <select id="seasonFilter">
+                        <option value="all">All Seasons</option>
+                        <option value="Kharif">Kharif (Monsoon)</option>
+                        <option value="Rabi">Rabi (Winter)</option>
+                        <option value="Zaid">Zaid (Summer)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="crop-grid" id="cropGrid">
+                <!-- Crop Cards Dynamic JS Population -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Farming Methods Section -->
+    <section id="methods" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Modern Farming Methods</h2>
+                <p>Leveraging cutting-edge innovations to increase crop yields while conserving land and resources.</p>
+            </div>
+
+            <div class="methods-grid">
+                <div class="method-card scroll-reveal">
+                    <div class="method-img-box">
+                        <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=600&q=80" alt="Vertical Farming" class="card-img">
+                        <div class="method-icon-overlay"><i class="fa-solid fa-layer-group"></i></div>
+                    </div>
+                    <div class="method-card-body">
+                        <h3>Vertical Farming</h3>
+                        <p>Growing crops in vertically stacked layers in controlled indoor environments, reducing land usage by up to 90%.</p>
+                    </div>
+                </div>
+
+                <div class="method-card scroll-reveal">
+                    <div class="method-img-box">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" alt="Hydroponics & Aeroponics" class="card-img">
+                        <div class="method-icon-overlay"><i class="fa-solid fa-water"></i></div>
+                    </div>
+                    <div class="method-card-body">
+                        <h3>Hydroponics & Aeroponics</h3>
+                        <p>Soil-less cultivation where plants thrive on nutrient-rich water solution or misted mineral air environments.</p>
+                    </div>
+                </div>
+
+                <div class="method-card scroll-reveal">
+                    <div class="method-img-box">
+                        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Precision Agriculture" class="card-img">
+                        <div class="method-icon-overlay"><i class="fa-solid fa-satellite-dish"></i></div>
+                    </div>
+                    <div class="method-card-body">
+                        <h3>Precision Agriculture</h3>
+                        <p>Utilizing GPS, satellite imagery, and soil sensors to optimize field-level management and input efficiency.</p>
+                    </div>
+                </div>
+
+                <div class="method-card scroll-reveal">
+                    <div class="method-img-box">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=600&q=80" alt="Drone Crop Monitoring" class="card-img">
+                        <div class="method-icon-overlay"><i class="fa-solid fa-drone"></i></div>
+                    </div>
+                    <div class="method-card-body">
+                        <h3>Drone Crop Monitoring</h3>
+                        <p>Aerial multispectral imaging for early crop disease detection, yield estimation, and spot spraying.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Irrigation Techniques Section -->
+    <section id="irrigation" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced Irrigation Techniques</h2>
+                <p>Efficient water management strategies designed to maximize crop hydration and minimize water loss.</p>
+            </div>
+
+            <div class="irrigation-flex">
+                <div class="irrigation-item scroll-reveal">
+                    <div class="irrigation-img">
+                        <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=800&q=80" alt="Drip Irrigation System">
+                    </div>
+                    <div class="irrigation-details">
+                        <span class="badge"><i class="fa-solid fa-droplet"></i> Precision Water Delivery</span>
+                        <h3>Drip Irrigation System</h3>
+                        <p>Delivers water directly to plant roots through a network of valves, pipes, and emitters. Saves up to 60% more water compared to flood irrigation.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> 90%+ Water Use Efficiency</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Minimizes Weed Growth & Soil Erosion</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Ideal for Solanaceous & Fruit Crops</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="irrigation-item scroll-reveal">
+                    <div class="irrigation-img">
+                        <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80" alt="Smart Sprinkler Systems">
+                    </div>
+                    <div class="irrigation-details">
+                        <span class="badge"><i class="fa-solid fa-shower"></i> Simulated Rainfall</span>
+                        <h3>Smart Sprinkler Systems</h3>
+                        <p>Pipes pressure water through nozzles to simulate natural rainfall. Equipped with automated moisture sensors for timed cycles.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Uniform Coverage for Dense Fields</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Automated Rain Delay Controls</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Excellent for Wheat, Pulses & Grains</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="irrigation-item scroll-reveal">
+                    <div class="irrigation-img">
+                        <img src="https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?auto=format&fit=crop&w=800&q=80" alt="Subsurface & Automated Pivot">
+                    </div>
+                    <div class="irrigation-details">
+                        <span class="badge"><i class="fa-solid fa-microchip"></i> IoT Moisture Control</span>
+                        <h3>Subsurface & Automated Pivot Systems</h3>
+                        <p>Integrates subterranean drip lines and automated central pivot booms with live soil sensors to deliver automated micro-irrigation schedules.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Zero Surface Evaporation Losses</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Fully Remote Telemetry & App Triggering</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Optimal for Large Commercial Farmlands</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soil Classification & Health Section -->
+    <section id="soil" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Soil Classification & Health</h2>
+                <p>Understanding your soil profile is the foundation of successful agricultural operations.</p>
+            </div>
+
+            <div class="soil-grid">
+                <div class="soil-card scroll-reveal">
+                    <div class="soil-img-box">
+                        <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19655?auto=format&fit=crop&w=600&q=80" alt="Alluvial Soil" class="card-img">
+                    </div>
+                    <div class="soil-card-body">
+                        <div class="soil-badge">pH 6.0 - 7.5</div>
+                        <h3>Alluvial Soil</h3>
+                        <p>Rich in potash, phosphoric acid, and lime. Highly fertile riverbed silt, ideal for rice, wheat, and sugarcane.</p>
+                    </div>
+                </div>
+
+                <div class="soil-card scroll-reveal">
+                    <div class="soil-img-box">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Black Regur Soil" class="card-img">
+                    </div>
+                    <div class="soil-card-body">
+                        <div class="soil-badge">pH 6.8 - 8.0</div>
+                        <h3>Black (Regur) Soil</h3>
+                        <p>High clay content with exceptional moisture retention. Self-plowing texture, perfect for cotton, groundnut, and soybean.</p>
+                    </div>
+                </div>
+
+                <div class="soil-card scroll-reveal">
+                    <div class="soil-img-box">
+                        <img src="https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?auto=format&fit=crop&w=600&q=80" alt="Red & Yellow Soil" class="card-img">
+                    </div>
+                    <div class="soil-card-body">
+                        <div class="soil-badge">pH 5.5 - 6.5</div>
+                        <h3>Red & Yellow Soil</h3>
+                        <p>Formed by crystalline igneous rocks, rich in iron oxide. Well-aerated, excellent for millets, pulses, and oilseeds.</p>
+                    </div>
+                </div>
+
+                <div class="soil-card scroll-reveal">
+                    <div class="soil-img-box">
+                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=600&q=80" alt="Laterite Soil" class="card-img">
+                    </div>
+                    <div class="soil-card-body">
+                        <div class="soil-badge">pH 4.5 - 5.5</div>
+                        <h3>Laterite Soil</h3>
+                        <p>Leached acidic soil rich in iron and aluminum oxides. Highly suited for plantation crops like tea, coffee, and cashew.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fertilizer Calculator Section -->
+    <section id="calculator" class="section-padding">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Smart Fertilizer Calculator</h2>
+                <p>Calculate optimal N-P-K fertilizer dosage for your farm area to maximize yield and prevent soil toxicity.</p>
+            </div>
+
+            <div class="calc-wrapper scroll-reveal">
+                <form id="fertilizerForm" class="calc-form">
+                    <div class="form-group">
+                        <label for="calcCrop"><i class="fa-solid fa-wheat-awn"></i> Target Crop</label>
+                        <select id="calcCrop" required>
+                            <option value="wheat">Wheat (High Nitrogen Requirement)</option>
+                            <option value="rice">Rice (Balanced N-P-K)</option>
+                            <option value="corn">Maize / Corn (Heavy Feeder)</option>
+                            <option value="cotton">Cotton (Potassium Heavy)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="landArea"><i class="fa-solid fa-chart-area"></i> Field Area (Acres)</label>
+                        <input type="number" id="landArea" min="0.5" step="0.5" value="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="soilType"><i class="fa-solid fa-mountain"></i> Soil Condition</label>
+                        <select id="soilType">
+                            <option value="normal">Normal Fertility</option>
+                            <option value="deficient">Nutrient Deficient (+20%)</option>
+                            <option value="rich">Nutrient Rich (-15%)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-calculator"></i> Calculate Dosage</button>
+                </form>
+
+                <div class="calc-results" id="calcResults">
+                    <h3>Recommended Dosage</h3>
+                    <div class="result-cards">
+                        <div class="res-card">
+                            <span>Urea (Nitrogen 46%)</span>
+                            <strong id="ureaVal">0 kg</strong>
+                        </div>
+                        <div class="res-card">
+                            <span>DAP (Phosphorus 46%)</span>
+                            <strong id="dapVal">0 kg</strong>
+                        </div>
+                        <div class="res-card">
+                            <span>MOP (Potassium 60%)</span>
+                            <strong id="mopVal">0 kg</strong>
+                        </div>
+                    </div>
+                    <p class="calc-note"><i class="fa-solid fa-circle-info"></i> Spread application evenly across split growth stages for optimal absorption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Image Gallery -->
+    <section id="gallery" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Interactive Farming Gallery</h2>
+                <p>Click on any image to inspect high-resolution agricultural innovations in action.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item scroll-reveal" data-img="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80" data-caption="Golden Wheat Harvest during Peak Season">
+                    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80" alt="Wheat Harvest">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Golden Wheat Fields</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item scroll-reveal" data-img="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1200&q=80" data-caption="Automated Greenhouses with Hydroponic Verticals">
+                    <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=600&q=80" alt="Smart Greenhouse">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Smart Greenhouse</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item scroll-reveal" data-img="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=1200&q=80" data-caption="Smart Drip and Micro Sprinkler Arrays">
+                    <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=600&q=80" alt="Irrigation System">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Modern Irrigation</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item scroll-reveal" data-img="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1200&q=80" data-caption="Autonomous Farming Drones Scanning Crops">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=600&q=80" alt="Agricultural Drone">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Agri-Drone Tech</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Random Farmer Tips Section -->
+    <section id="tips" class="section-padding">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Expert Farmer Tips Generator</h2>
+                <p>Receive instant, battle-tested wisdom from seasoned agronomists and soil scientists.</p>
+            </div>
+
+            <div class="tip-card-wrapper scroll-reveal">
+                <div class="tip-box" id="tipDisplay">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p id="tipText">Crop rotation with nitrogen-fixing legumes increases soil health and reduces reliance on chemical fertilizers.</p>
+                    <span id="tipAuthor">- Agronomy Best Practices</span>
+                </div>
+                <button class="btn btn-primary" id="nextTipBtn"><i class="fa-solid fa-arrows-rotate"></i> Generate Random Tip</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="Enlarged View">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="logo text-white">
+                    <i class="fa-solid fa-seedling"></i> Agri<span>Tech</span>
+                </a>
+                <p>Advancing sustainable food systems through digital agriculture, smart sensing, and eco-friendly farming.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#crops">Crop Finder</a>
+                <a href="#methods">Farming Methods</a>
+                <a href="#irrigation">Irrigation</a>
+                <a href="#calculator">Fertilizer Calc</a>
+            </div>
+            <div class="footer-links">
+                <h4>Contact Support</h4>
+                <p><i class="fa-solid fa-envelope"></i> contact@agritech-digital.org</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (800) 555-AGRI</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AgriTech Digital Farming Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
